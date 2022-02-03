@@ -100,7 +100,7 @@ class Home extends React.Component {
     fetchTopic(section, pageSize, done) {
         caches.open('topic-cache').then(cache => {
             const url = "https://content.guardianapis.com/search?api-key=";
-            const query = "&section=" + section + "&show-fields=thumbnail,trailText&tag=tone/news&page-size=" + pageSize;
+            const query = "&section=" + section + "&show-fields=thumbnail,trailText,lastModified&tag=tone/news&page-size=" + pageSize;
 
             const fullUrl = (url + API_KEY + query);
             fetch(fullUrl)
@@ -115,6 +115,7 @@ class Home extends React.Component {
                         webTitle: item.webTitle,
                         headline: item.fields.trailText,
                         thumbnail: item.fields.thumbnail,
+                        lastModified: item.fields.lastModified,
                     }));
                     if (done) done(results);
                 });
@@ -229,6 +230,29 @@ class Home extends React.Component {
             });
         });
     });
+    sortDir = (dir) => {
+        const sorting = (dir, arr) =>
+            arr.sort(function (a, b) {
+                const c = new Date(a.lastModified);
+                const d = new Date(b.lastModified);
+                return (dir === 'oldest' ? (c - d) : (d - c));
+            });
+
+        const sortedTopStories = sorting(dir, this.state.topStories);
+        const sortedSports = sorting(dir, this.state.sports);
+        const sortedCultures = sorting(dir, this.state.cultures);
+        const sortedLifestyles = sorting(dir, this.state.lifestyles);
+        this.setState({
+            loading: false,
+            article: null,
+            topStories: sortedTopStories,
+            sports: sortedSports,
+            cultures: sortedCultures,
+            lifestyles: sortedLifestyles,
+            searchResults: null,
+            bookmarkResults: null,
+        });
+    }
     gotoSearchResults = (keyword) => {
         if (keyword.length < 1) this.gotoHome();
         else this.showLoadingThen(_ => {
@@ -273,6 +297,7 @@ class Home extends React.Component {
             <Content
                 gotoArticle={this.gotoArticle}
                 bookmark={this.gotoBookmarkResults}
+                sortDir={this.sortDir}
                 topStories={this.state.topStories}
                 sports={this.state.sports}
                 cultures={this.state.cultures}

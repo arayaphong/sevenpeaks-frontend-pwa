@@ -11,12 +11,12 @@ class SmallCard extends React.Component {
             headline: props.headline,
         }
     }
-    onClick = (e) => this.props.gotoArticle(this.state.id);
+    onClick = (e) => this.props.gotoArticle(this.props.id);
     render() {
         return (
             <div className="SmallCard" onClick={this.onClick}>
                 <div className="SmallCardTitle">
-                    {this.state.webTitle}
+                    {this.props.webTitle}
                 </div>
             </div>
         );

@@ -11,16 +11,16 @@ class MediumCard extends React.Component {
             headline: props.headline,
         }
     }
-    onClick = (e) => this.props.gotoArticle(this.state.id);
+    onClick = (e) => this.props.gotoArticle(this.props.id);
     render() {
         return (
             <div className="MediumCard" onClick={this.onClick}>
                 <div style={{ height: "60%" }}>
-                    <img src={this.state.thumbnail} alt='thumbnail' style={{ width: '100%', height: '100%' }} />
+                    <img src={this.props.thumbnail} alt='thumbnail' style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div style={{ height: "40%", backgroundColor: "darkblue" }}>
-                    <div className="MediumCardTitle">{this.state.webTitle}</div>
-                    <div className="MediumCardHeadline" dangerouslySetInnerHTML={{ __html: this.state.headline }} />
+                    <div className="MediumCardTitle">{this.props.webTitle}</div>
+                    <div className="MediumCardHeadline" dangerouslySetInnerHTML={{ __html: this.props.headline }} />
                 </div>
             </div>
         );

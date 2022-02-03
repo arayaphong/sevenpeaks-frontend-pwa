@@ -18,19 +18,22 @@ class Content extends React.Component {
     }
     gotoArticle = (id) => this.props.gotoArticle(id);
     onBookmarkClick = (e) => this.props.bookmark();
+    onSortDir = (e) => this.props.sortDir(e.target.value);
     render() {
         // assume all stories must not be empty
         const topStories = this.state.topStories;
         const sports = this.state.sports;
         const cultures = this.state.cultures;
         const lifestyles = this.state.lifestyles;
+
+        console.log(topStories[0].lastModified, topStories[0].thumbnail);
         return (
             <div>
                 <div style={{ float: "right", marginRight: "14px", height: "37px" }}>
                     <img src='./view-bookmark.svg'
                         onClick={this.onBookmarkClick}
                         alt='view-bookmark' />
-                    <select id="orderBy" name="orderBy" className='Dropdown'>
+                    <select id="sortDir" name="sortDir" className='Dropdown' onChange={this.onSortDir}>
                         <option value="newest">&nbsp; Newest First</option>
                         <option value="oldest">&nbsp; Oldest First</option>
                     </select>
@@ -47,46 +50,46 @@ class Content extends React.Component {
                         <div className='TopSectionRow1Col2'>
                             <div className="TopSectionRow1Col2Upper">
                                 <NormalCard
-                                    id={topStories[1].id}
-                                    thumbnail={topStories[1].thumbnail}
-                                    webTitle={topStories[1].webTitle}
+                                    id={topStories[4].id}
+                                    thumbnail={topStories[4].thumbnail}
+                                    webTitle={topStories[4].webTitle}
                                     gotoArticle={this.gotoArticle} />
                                 <NormalCard
-                                    id={topStories[2].id}
-                                    thumbnail={topStories[2].thumbnail}
-                                    webTitle={topStories[2].webTitle}
+                                    id={topStories[5].id}
+                                    thumbnail={topStories[5].thumbnail}
+                                    webTitle={topStories[5].webTitle}
                                     gotoArticle={this.gotoArticle} />
                             </div>
                             <div className="TopSectionRow1Col2Lower">
                                 <SmallCard
-                                    id={topStories[3].id}
-                                    webTitle={topStories[3].webTitle}
+                                    id={topStories[6].id}
+                                    webTitle={topStories[6].webTitle}
                                     gotoArticle={this.gotoArticle} />
                                 <SmallCard
-                                    id={topStories[4].id}
-                                    webTitle={topStories[4].webTitle}
+                                    id={topStories[7].id}
+                                    webTitle={topStories[7].webTitle}
                                     gotoArticle={this.gotoArticle} />
                             </div>
                         </div>
                     </div>
                     <div className="TopSectionRow2">
                         <MediumCard
-                            id={topStories[5].id}
-                            thumbnail={topStories[5].thumbnail}
-                            webTitle={topStories[5].webTitle}
-                            headline={topStories[5].headline}
+                            id={topStories[1].id}
+                            thumbnail={topStories[1].thumbnail}
+                            webTitle={topStories[1].webTitle}
+                            headline={topStories[1].headline}
                             gotoArticle={this.gotoArticle} />
                         <MediumCard
-                            id={topStories[6].id}
-                            thumbnail={topStories[6].thumbnail}
-                            webTitle={topStories[6].webTitle}
-                            headline={topStories[6].headline}
+                            id={topStories[2].id}
+                            thumbnail={topStories[2].thumbnail}
+                            webTitle={topStories[2].webTitle}
+                            headline={topStories[2].headline}
                             gotoArticle={this.gotoArticle} />
                         <MediumCard
-                            id={topStories[7].id}
-                            thumbnail={topStories[7].thumbnail}
-                            webTitle={topStories[7].webTitle}
-                            headline={topStories[7].headline}
+                            id={topStories[3].id}
+                            thumbnail={topStories[3].thumbnail}
+                            webTitle={topStories[3].webTitle}
+                            headline={topStories[3].headline}
                             gotoArticle={this.gotoArticle} />
                     </div>
                 </div>

@@ -12,19 +12,19 @@ class NormalCard extends React.Component {
             headline: props.headline,
         }
     }
-    onClick = (e) => this.props.gotoArticle(this.state.id);
+    onClick = (e) => this.props.gotoArticle(this.props.id);
     render() {
-        const isResultCard = (this.state.type === "result-card");
+        const isResultCard = (this.props.type === "result-card");
         const unsetWidth = (isResultCard ? ({ width: "unset", margin: "3%" }) : ({}));
         const fixedFont = (isResultCard ? ({ fontSize: "1.25rem" }) : ({}));
         return (
             <div className="NormalCard" style={unsetWidth} onClick={this.onClick}>
                 <div style={{ height: "60%" }}>
-                    <img src={this.state.thumbnail || "./no-images.png"} alt='thumbnail' style={{ width: '100%', height: '100%' }} />
+                    <img src={this.props.thumbnail || "./no-images.png"} alt='thumbnail' style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div style={{ height: "40%", backgroundColor: "darkblue" }}>
                     <div className={"NormalCardTitle"} style={fixedFont}>
-                        {this.state.webTitle}
+                        {this.props.webTitle}
                     </div></div>
             </div>
         );
