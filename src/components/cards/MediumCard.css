@@ -8,7 +8,7 @@
 
 .MediumCardTitle {
     top: 73%;
-    font-size: 1.5vw;
+    font-size: calc(1vw + 6pt);
     font-weight: bold;
     margin-left: 5%;
     margin-right: 5%;
@@ -26,7 +26,7 @@
 
 .MediumCardHeadline {
     top: 88%;
-    font-size: 1.25vw;
+    font-size: calc(1vw + 6pt);
     margin-left: 5%;
     margin-right: 5%;
     position: absolute;
@@ -37,6 +37,27 @@
     -webkit-line-clamp: 2;
 }
 
-@media screen and (max-width: 720px) {}
+@media screen and (max-width: 1120px) {
+    .MediumCardHeadline {
+        font-size: 10pt;
+    }
+}
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 900px) {
+    .MediumCardHeadline {
+        display: none;
+    }
+
+    .MediumCardTitle {
+        top: 80%;
+        -webkit-line-clamp: 3;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .MediumCardTitle {
+        top: 80%;
+        font-weight: normal;
+        -webkit-line-clamp: 2;
+    }
+}

@@ -6,8 +6,8 @@
 }
 
 .BigCardTitle {
-    top: 84%;
-    font-size: 1.75vw;
+    top: 82%;
+    font-size: calc(1vw + 8pt);
     font-weight: bold;
     margin-left: 4%;
     margin-right: 4%;
@@ -24,8 +24,8 @@
 }
 
 .BigCardHeadline {
-    top: 94%;
-    font-size: 1.25vw;
+    top: 92%;
+    font-size: calc(1vw + 5pt);
     margin-left: 4%;
     margin-right: 4%;
     position: absolute;
@@ -36,6 +36,45 @@
     -webkit-line-clamp: 2;
 }
 
-@media screen and (max-width: 720px) {}
+@media screen and (max-width: 960px) {
+    .BigCardTitle {
+        font-size: 13pt;
+    }
 
-@media screen and (max-width: 480px) {}
+    .BigCardHeadline {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .BigCardTitle {
+        font-size: 12pt;
+    }
+
+    .BigCardHeadline {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .BigCardTitle {
+        font-size: 13px;
+        top: 88%;
+    }
+
+    .BigCardHeadline {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .BigCardTitle {
+        font-size: 13px;
+        font-weight: normal;
+        top: 88%;
+    }
+
+    .BigCardHeadline {
+        display: none;
+    }
+}
