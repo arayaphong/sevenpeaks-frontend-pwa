@@ -38,14 +38,7 @@ class ArticlePage extends React.Component {
         const localeDateTime = dayName + " " + dateTime.toLocaleString();
         return (
             <div style={{ display: "flex" }}>
-                <div style={
-                    {
-                        width: "80%",
-                        marginTop: "2%",
-                        marginLeft: "5%",
-                        marginRight: "5%",
-                        marginBottom: "3%",
-                    }}>
+                <div className='ArticleBody'>
                     <img src={this.state.bookmarked ? './remove-bookmark.svg' : './add-bookmark.svg'}
                         onClick={this.onBookmarkClick}
                         alt="add-bookmark" />
@@ -55,7 +48,7 @@ class ArticlePage extends React.Component {
                     <hr />
                     <div dangerouslySetInnerHTML={{ __html: this.state.details }} />
                 </div>
-                <div style={{ width: "20%" }}>
+                <div className='ArticleMedia'>
                     <div style={{ marginTop: "75%" }} dangerouslySetInnerHTML={{ __html: this.state.media }} />
                 </div>
             </div>

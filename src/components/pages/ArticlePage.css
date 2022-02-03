@@ -1,3 +1,26 @@
+.ArticleBody {
+    width: 80%;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+
+.ArticleMedia {
+    width: 340px;
+}
+
+@media screen and (max-width: 640px) {
+    .ArticleBody {
+        width: 100%;
+        margin-right: 5%;
+    }
+
+    .ArticleMedia {
+        display: none;
+    }
+}
+
+/* override theguardian body*/
 .gu-image {
     width: 100%;
     height: 100%;
