@@ -1,0 +1,18 @@
+.gu-image {
+    width: 100%;
+    height: 100%;
+}
+
+.element-image__caption {
+    margin-top: 1%;
+}
+
+.element-image__credit {
+    color: gray;
+    font-size: small;
+    font-style: italic;
+}
+
+.block-time, .published-time {
+    display: none;
+}

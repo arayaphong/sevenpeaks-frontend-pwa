@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.SmallCard {
+    position: relative;
+    margin: 1%;
+    width: 50%;
+    color: white;
+    background-color: darkblue;
+}
+
+.SmallCardTitle {
+    font-size: 2vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+}
+
+.SmallCard:hover .SmallCardTitle {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 720px) {
+    .SmallCardTitle {
+        font-size: small;
+        -webkit-line-clamp: 4;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .SmallCardTitle {
+        font-size: small;
+        -webkit-line-clamp: 3;
+    }
+}

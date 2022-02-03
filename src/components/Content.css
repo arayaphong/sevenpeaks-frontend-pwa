@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.TopSection {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%;
+}
+
+.TopSectionRow1 {
+    display: flex;
+    height: 40vw;
+    flex-direction: row;
+}
+
+.TopSectionRow1Col2 {
+    width: 50%;
+}
+
+.TopSectionRow1Col2Upper {
+    display: flex;
+    height: 25vw;
+    flex-direction: row;
+}
+
+.TopSectionRow1Col2Lower {
+    display: flex;
+    height: 15vw;
+    flex-direction: row;
+}
+
+.TopSectionRow2, .NextSectionRow {
+    display: flex;
+    height: 25vw;
+    flex-direction: row;
+}
+
+.TopSectionRow2ColAny {
+    margin: 0.5%;
+    width: 33.33%;
+}
+
+.NextNormalThreeCardRow {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 64px;
+}
+
+.NextNormalThreeCardColumn {
+    float: left;
+    width: calc((100% / 3) + 0px);
+    height: 24vw;
+}
+
+
+@media screen and (max-width: 640px) {
+    /* .SmallTwoCardRow {
+        margin-top: 14.5%;
+    } */
+}
+
+.NextSection {
+    margin-top: 10px;
+    margin-left: 16px;
+    height: 100%;
+    width: 95%;
+}
+
+.Dropdown {
+    position: relative;
+    top: -43px;
+    float: right;
+    width: 42%;
+    height: 30px;
+    margin-left: 16px;
+    font-size: 12pt;
+}

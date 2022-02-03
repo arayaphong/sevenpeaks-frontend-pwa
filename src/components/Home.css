@@ -1,0 +1,21 @@
+.Home {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+.Loading {
+    position: relative;
+    top: calc((100% /2) + (-323px /2));
+    left: calc((100% /2) + (-233px /2));
+}
+
+.Footer {
+    float: right;
+    margin-top: 5%;
+    width: 100%;
+    height: 126px;
+    left: 0px;
+    background: #09357B;
+}

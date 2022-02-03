@@ -1,0 +1,41 @@
+.BigCard {
+    position: relative;
+    width: 50%;
+    margin: 0.5%;
+    color: white;
+}
+
+.BigCardTitle {
+    top: 84%;
+    font-size: 1.75vw;
+    font-weight: bold;
+    margin-left: 4%;
+    margin-right: 4%;
+    position: absolute;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.BigCard:hover .BigCardTitle {
+    text-decoration: underline;
+}
+
+.BigCardHeadline {
+    top: 94%;
+    font-size: 1.25vw;
+    margin-left: 4%;
+    margin-right: 4%;
+    position: absolute;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+@media screen and (max-width: 720px) {}
+
+@media screen and (max-width: 480px) {}

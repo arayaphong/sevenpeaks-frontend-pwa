@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.NormalCard {
+    position: relative;
+    margin: 1%;
+    width: 50%;
+    color: white;
+    background-color: darkblue;
+}
+
+.NormalCardTitle {
+    font-size: 2vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.NormalCard:hover .NormalCardTitle {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 720px) {
+    .NormalCardTitle {
+        font-size: small;
+        -webkit-line-clamp: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .NormalCardTitle {
+        font-size: small;
+        -webkit-line-clamp: 1;
+    }
+}

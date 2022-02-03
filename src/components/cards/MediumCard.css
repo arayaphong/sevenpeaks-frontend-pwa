@@ -1,0 +1,42 @@
+.MediumCard {
+    position: relative;
+    margin: 0.5%;
+    width: 33.33%;
+    color: white;
+    background-color: darkblue;
+}
+
+.MediumCardTitle {
+    top: 73%;
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.MediumCard:hover .MediumCardTitle {
+    text-decoration: underline;
+}
+
+.MediumCardHeadline {
+    top: 88%;
+    font-size: 1.25vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: absolute;
+    transform: translateY(-50%);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+@media screen and (max-width: 720px) {}
+
+@media screen and (max-width: 480px) {}
