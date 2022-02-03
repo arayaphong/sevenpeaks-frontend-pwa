@@ -28,15 +28,17 @@ class Header extends React.Component {
     render() {
         return (
             <header className='Header'>
-                <img className='Logo' src="./Logo_White.png" onClick={this.onLogoClick} alt='logo'></img>
+                <div className='LogoWrapper'>
+                    <img className='Logo' src="./Logo_White.png" onClick={this.onLogoClick} alt='logo'></img>
+                </div>
                 <div className='Searcher'>
-                    <input type="text"
+                    <input className='SearchBox'
+                        type="text"
                         placeholder="Search.."
                         name="search"
                         value={this.state.keyword}
                         onChange={e => this.updateInputValue(e)}
-                        onKeyDown={this.onSearchEnter}
-                        style={{ width: "100%", height: "100%" }} />
+                        onKeyDown={this.onSearchEnter} />
                     <img className='SearchIcon'
                         src="./search-icon@2x.png"
                         onClick={this.onSearchClick}

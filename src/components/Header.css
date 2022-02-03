@@ -1,5 +1,4 @@
 .Header {
-    position: relative;
     width: 100%;
     background: #09357B;
 }
@@ -11,19 +10,59 @@
     margin-top: 0.5cm;
 }
 
+.LogoWrapper {
+    position: inherit;
+}
+
 .Searcher {
-    margin-right: 2cm;
     position: absolute;
-    right: 0;
-    top: 60px;
-    height: 1cm;
-    width: 6cm;
+    top: 89px;
+    right: 2cm;
+    text-align: right;
+}
+
+.SearchBox {
+    position: absolute;
+    height: 1.5rem;
+    right: 25px;
 }
 
 .SearchIcon {
-    height: 75%;
     position: relative;
     margin-left: 10px;
-    top: -34px;
-    left: 225px;
+    top: 3px;
+}
+
+@media screen and (max-width: 640px) {
+    .Header {
+        width: 100%;
+        height: 140px;
+        background: #09357B;
+    }
+
+    .Logo {
+        position: relative;
+        height: 80px;
+        margin-left: auto;
+
+    }
+
+    .LogoWrapper {
+        position: inherit;
+        text-align: center;
+    }
+
+    .Searcher {
+        position: inherit;
+        top: -8px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 14px;
+    }
+
+    .SearchBox {
+        position: inherit;
+        height: 1.5rem;
+        right: 25px;
+    }
 }
