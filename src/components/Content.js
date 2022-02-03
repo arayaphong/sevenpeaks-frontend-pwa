@@ -29,7 +29,7 @@ class Content extends React.Component {
         console.log(topStories[0].lastModified, topStories[0].thumbnail);
         return (
             <div>
-                <div style={{ float: "right", marginRight: "14px", height: "37px" }}>
+                <div style={{ float: "right", marginRight: "40px", height: "37px" }}>
                     <img src='./view-bookmark.svg'
                         onClick={this.onBookmarkClick}
                         alt='view-bookmark' />
